@@ -1,19 +1,381 @@
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="Training.html">Training</a>
-  <a href="TrainingCalendar.html">TrainingCalendar</a>
-  <a href="References.html">References</a>
-  <a href="Research.html">Research</a>
-  <a href="contact.html">Contact</a>
-</nav>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>IAIQCI</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IAIQCI | Quality, Continuous Improvement & AI Integration</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      background: #f5f7fa;
+    }
+
+    header {
+      background: #0f172a;
+      color: white;
+      padding: 20px 8%;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
+    .nav a:hover {
+      color: #38bdf8;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      align-items: center;
+      padding: 80px 8%;
+      background: linear-gradient(135deg, #e0f2fe, #ffffff);
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      color: #0f172a;
+      margin-bottom: 20px;
+      line-height: 1.15;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+      color: #334155;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #0f172a;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-right: 10px;
+      margin-top: 10px;
+    }
+
+    .btn.secondary {
+      background: #0284c7;
+    }
+
+    .hero-img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    section {
+      padding: 70px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      color: #0f172a;
+      margin-bottom: 15px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 40px;
+      color: #475569;
+      font-size: 17px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 14px;
+      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+      border-top: 4px solid #0284c7;
+    }
+
+    .card h3 {
+      color: #0f172a;
+      margin-bottom: 12px;
+      font-size: 21px;
+    }
+
+    .card p {
+      color: #475569;
+    }
+
+    .about {
+      background: white;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
+
+    .metrics {
+      background: #0f172a;
+      color: white;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      text-align: center;
+    }
+
+    .metric h3 {
+      font-size: 34px;
+      color: #38bdf8;
+    }
+
+    .projects {
+      background: #f8fafc;
+    }
+
+    .project-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      background: #cbd5e1;
+    }
+
+    .contact {
+      background: white;
+      text-align: center;
+    }
+
+    .contact-box {
+      max-width: 700px;
+      margin: auto;
+      background: #f8fafc;
+      padding: 35px;
+      border-radius: 14px;
+      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+    }
+
+    footer {
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .about {
+        grid-template-columns: 1fr;
+      }
+
+      .cards,
+      .metrics {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .cards,
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav a {
+        margin-left: 0;
+        margin-right: 15px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to IAIQCI</h1>
-  <p>Artificial Intelligence| Quality | Lean Manufacturing | Continuous Improvement</p>
+
+  <header>
+    <div class="nav">
+      <div class="logo">IAIQCI</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="services.html">Services</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Quality Leadership, Lean Manufacturing & AI-Driven Continuous Improvement</h1>
+      <p>
+        IAIQCI supports operational excellence through quality systems, supplier development,
+        Lean transformation, root cause analysis, and practical AI integration for manufacturing
+        and business processes.
+      </p>
+      <a class="btn" href="services.html">View Services</a>
+      <a class="btn secondary" href="contact.html">Contact Us</a>
+    </div>
+    <div>
+      <img class="hero-img" src="images/hero-manufacturing.jpg" alt="Manufacturing and quality improvement" />
+    </div>
+  </section>
+
+  <section class="about">
+    <div>
+      <img src="images/quality-team.jpg" alt="Quality and continuous improvement team" />
+    </div>
+    <div>
+      <h2 class="section-title" style="text-align:left;">About IAIQCI</h2>
+      <p>
+        IAIQCI focuses on improving quality, productivity, and operational performance through
+        structured problem solving, Lean tools, quality management systems, and digital innovation.
+      </p>
+      <p style="margin-top:15px;">
+        Areas of expertise include ISO 9001, APQP, PPAP, supplier development, First Pass Yield
+        improvement, root cause analysis, visual management, and AI-enabled quality tools.
+      </p>
+    </div>
+  </section>
+
+  <section class="metrics">
+    <div class="metric">
+      <h3>20+</h3>
+      <p>Years of Experience</p>
+    </div>
+    <div class="metric">
+      <h3>ISO</h3>
+      <p>Quality Systems</p>
+    </div>
+    <div class="metric">
+      <h3>Lean</h3>
+      <p>Process Improvement</p>
+    </div>
+    <div class="metric">
+      <h3>AI</h3>
+      <p>Quality Integration</p>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Core Services</h2>
+    <p class="section-subtitle">
+      Practical support for organizations seeking stronger quality systems, improved processes,
+      better supplier performance, and sustainable continuous improvement.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Lean Manufacturing</h3>
+        <p>Support for 5S, visual management, Kaizen, waste reduction, takt-time improvement, and employee engagement.</p>
+      </div>
+      <div class="card">
+        <h3>Quality Systems</h3>
+        <p>ISO 9001 support, audit readiness, process documentation, corrective action, and quality management improvement.</p>
+      </div>
+      <div class="card">
+        <h3>Supplier Development</h3>
+        <p>Supplier performance improvement, APQP, PPAP, SCAR management, sourcing risk review, and production readiness.</p>
+      </div>
+      <div class="card">
+        <h3>Root Cause Analysis</h3>
+        <p>Structured problem solving using 8D, Six Sigma, containment, corrective action, and prevention methods.</p>
+      </div>
+      <div class="card">
+        <h3>AI Integration</h3>
+        <p>Practical AI applications to reduce manual work, improve document review, and accelerate problem resolution.</p>
+      </div>
+      <div class="card">
+        <h3>Training & Coaching</h3>
+        <p>Lean, quality, APQP, PPAP, and problem-solving training for employees, leaders, and supplier teams.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects">
+    <h2 class="section-title">Featured Focus Areas</h2>
+    <p class="section-subtitle">
+      Examples of operational excellence and quality improvement themes.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <img class="project-img" src="images/project-lean.jpg" alt="Lean manufacturing project" />
+        <h3>Lean Transformation</h3>
+        <p>Developing systems that improve flow, reduce waste, and increase production capacity.</p>
+      </div>
+      <div class="card">
+        <img class="project-img" src="images/project-quality.jpg" alt="Quality system project" />
+        <h3>Quality Management Systems</h3>
+        <p>Improving process consistency, audit readiness, and proactive quality controls.</p>
+      </div>
+      <div class="card">
+        <img class="project-img" src="images/project-ai.jpg" alt="AI and quality tools" />
+        <h3>AI + Quality Tools</h3>
+        <p>Using AI to streamline PPAP review, SCAR analysis, technical review, and documentation workflows.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="contact-box">
+      <h2 class="section-title">Contact</h2>
+      <p>For consulting, collaboration, or professional inquiries:</p>
+      <p style="margin-top:15px;"><strong>Email:</strong> your-email@example.com</p>
+      <p><strong>Phone:</strong> your-phone-number</p>
+      <a class="btn" href="mailto:your-email@example.com">Send Email</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 IAIQCI. Quality, Continuous Improvement & AI Integration.</p>
+  </footer>
+
 </body>
 </html>
